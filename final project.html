@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dungeons & Dragons</title>
+    <style>
+      body {
+        background: #f18fac;
+      }
+      h1 {
+        text-align: center;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        padding: 20px 30px;
+        margin: 0 auto 30px auto;
+        border: 1px solid #5d50c6;
+        border-color: #5d50c6;
+        background: #5d50c6;
+        border-radius: 30px;
+        color: #facd49;
+        text-decoration: underline;
+        width: 700px;
+        font-size: 35px;
+      }
+      h2 {
+        text-align: center;
+        color: #f62a66;
+        padding: 1px 5px;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 600px;
+        padding: 20px 30px;
+      }
+      p {
+        font-size: 20px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        text-align: center;
+        color: white;
+        border: 5px solid #facd49;
+        background: #00a8b5;
+        border-radius: 30px;
+        padding: 20px 30px;
+        margin: 0 auto 30px auto;
+        width: 600px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 22px;
+        background: #f62a66;
+        color: #facd49;
+        border: 2px solid #facd49;
+        border-radius: 100px;
+        padding: 20px 30px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease;
+      }
+      button:hover {
+        cursor: pointer;
+        background: #facd49;
+        color: #f62a66;
+      }
+      hr.rounded {
+        border-top: 5px solid #00a8b5;
+        border-radius: 5px;
+        width: 500px;
+      }
+      span.character {
+        color: #f62a66;
+      }
+      .coder {
+        display: block;
+        text-align: center;
+        padding: 20px 30px;
+        color: #f62a66;
+      }
+      .wikipedia {
+        color: #5d50c6;
+        text-decoration: underline;
+      }
+      .wikipedia:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>I love Dungeons & Dragons</h1>
+    <hr class="rounded" />
+    <h2><em>and you should too!</em></h2>
+    <hr class="rounded" />
+    <button>
+      <strong><em>Get Started</em></strong>
+    </button>
+    <img
+    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/612/original/critical_role.jpg?1625851110"
+    width= />
+    <br />
+
+    <div id="info">
+      <p>
+        Dungeons & Dragons is a Tabletop Role Playing Game (TTRPG) where you can
+        create cool characters with your friends and go on high fantasy
+        adventures together! You could be a
+        <span class="character"
+          ><em><strong>half-elf ranger</strong></em></span
+        >
+        with a grizzly bear companion. Or maybe a
+        <span class="character"
+          ><em><strong>tiefling cleric</strong></em></span
+        >
+        with a penchant for mischief? Or perhaps a
+        <span class="character"
+          ><em><strong>human monk</strong></em></span
+        >
+        who can deflect bullets is more your thing? Whatever your preference,
+        there's something for you!
+        <br />
+        <br />
+        Go on an epic journey with a bunch of pals; be morally conscious or let
+        chaos reign, the choice is up to you. Commence your quest to save the
+        world, or die trying. Will you succeed?<u>
+          <em>The dice will decide!</em></u
+        >
+        <br />
+        <br />
+      </p>
+    </div>
+    <p class="criticalRole">
+      Before you start playing though, I recommend watching the hit series
+      <a
+        class="wikipedia"
+        href="https://en.wikipedia.org/wiki/Critical_Role"
+        target="_blank"
+        ><em><strong>Critical Role</strong></em></a
+      >
+      on Youtube to get an immersive experience on how to get the most out of
+      your game.
+    </p>
+
+    <div>
+      <a class="coder"
+      href="https://www.linkedin.com/in/elyssa-sayers-874a59159/"
+      target="_blank"
+       >Coded by
+      Elyssa Sayers
+    </div>
+    <script>
+      function getStarted() {
+        let name = prompt("What is your name?");
+        let fun = prompt("Do you like fun?");
+        let h2 = document.querySelector("h2");
+        fun = fun.toLowerCase();
+        fun = fun.trim();
+        fun = fun.replace("yeah", "yes");
+        if (fun === "yes") {
+          alert("You're cool! Grab your friends and start playing 🎲🐲");
+          h2.innerHTML = "and you will too, " + name + "!";
+        } else {
+          alert("Are you sure?😢");
+        }
+      }
+      let playGame = document.querySelector("button");
+      playGame.addEventListener("click", getStarted);
+    </script>
+  </body>
+</html>
